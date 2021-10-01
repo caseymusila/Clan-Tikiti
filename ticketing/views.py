@@ -42,7 +42,7 @@ def registerPage(request):
 
 
   context = {'form': form}
-  return render(request, 'accounts/registration.html',context)
+  return render(request, 'accounts/registration.html',context
 
 
 # displaying all events
