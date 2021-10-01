@@ -69,7 +69,7 @@ def create_event(request):
 
   else:
     form = EventForm()
-  return render(request, "event.html", {"form": form,"title": title})
+  return render(request, "event.html", {"form": form,"title": title}
 
 # displaying single event
 @login_required(login_url="login/")
