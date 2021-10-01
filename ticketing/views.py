@@ -47,7 +47,7 @@ def registerPage(request):
 
 # displaying all events
 @login_required(login_url="login")
-def home(request)
+def home(request):
   title="Clan Tikiti"
   date=dt.date.today()
   events =Event.display_all_events()
