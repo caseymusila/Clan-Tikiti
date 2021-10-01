@@ -76,4 +76,4 @@ def create_event(request):
 def disp_event(request,event_id):
     event=Event.objects.get(pk=event_id)
     title=event.name.title()
-    return render(request, 'dispevents.html', {"title":title, "event":event })
+    return render(request, 'dispevents.html', {"title":title, "event":event }
