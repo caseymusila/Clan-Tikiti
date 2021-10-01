@@ -5,7 +5,7 @@ from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
-class Event(models.Model)
+class Event(models.Model):
     name = models.CharField(max_length=255, unique=True)
     image = CloudinaryField('Event Image')
     description = models.TextField
