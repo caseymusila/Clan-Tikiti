@@ -52,4 +52,4 @@ class Event(models.Model):
       return cls.objects.all()
 
     def save_event(self):
-      self.save()
+      self.save(
