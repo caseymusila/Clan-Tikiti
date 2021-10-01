@@ -55,7 +55,7 @@ def home(request):
 
 # create an event
 @login_required(login_url="login/")
-def create_event(request):
+def create_event(request)
   title="Create Event"
   current_user = request.user
   if request.method == "POST":
