@@ -10,7 +10,7 @@ class CreateUserForm(UserCreationForm):
     model=User
     fields=['username', 'email','password1','password2']
 
-class EventForm(ModelForm)
+class EventForm(ModelForm):
   class Meta:
     model=Event
     exclude =['user']
