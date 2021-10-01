@@ -1,11 +1,11 @@
-from django.db import model
+from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
-class Event(models.Model):
+class Event(models.Model)
     name = models.CharField(max_length=255, unique=True)
     image = CloudinaryField('Event Image')
     description = models.TextField
