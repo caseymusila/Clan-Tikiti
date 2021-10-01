@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% load static %}
+{% load bootstrap4 %}
+{% load cloudinary %}
+
+{% block content %}
+{{ block.super}}
+
+<div class="container">
+    <div class="box content" id="wrapper" >
+      <div class="card ml-5 mr-5 mb-5 create-profile-card">
+        <div class="text-center">
+          <div class="title mt-4 mb-4">Create an Event .</div>
+          <hr>
+        </div>
+        <form action="{%url 'create_event'%}" method="post" enctype="multipart/form-data"> {%csrf_token%}
+          {% bootstrap_form form%} <input type="submit" class="btn btn-sm create-prof-btn" value="Create Event">
+        </form>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

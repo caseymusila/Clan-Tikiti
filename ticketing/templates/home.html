@@ -1,0 +1,42 @@
+{%extends 'base.html'%} 
+{% load static %}
+{% load bootstrap4 %}
+{{ block.super}}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+
+{% block content %} 
+  {{ block.super}}
+ <div class="jumbotron jumbotron-fluid home-jumbo home-overlay" style="margin-bottom: 40px;">
+  <h1 class="text-center text-white jumbo-title">Clan Tikiti.</h1>
+  
+ </div>
+ 
+<div class="container" style="display: flex; flex-wrap: wrap;">
+
+  {% if events %}
+  {% for event in events %}
+  <div class="m-4">
+    <div class="card " style="width: 20rem; height: 22rem;">
+      <div class="card-image img-fluid">
+        <a href="{% url 'disp_event' event.id %}">
+          <img class="card-img-top" src="{{event.image.url}}" alt="Card image cap">
+        </a>
+        <div class="image-overlay">
+          <a href="{{event.link}}" style="text-decoration: none;" class="card-icon-link"><i
+              class="bi bi-arrow-right-circle text-white card-icon"></i></a>
+        </div>
+      </div>
+      <div class="card-body " style="padding-bottom: 10px;">
+        <h5 class="card-title "><a href="{% url 'disp_event' event.id %}"
+            class="home-card-title">{{event.name}}</a></h5>
+        <p class="card-text post-date">{{event.start_date}}</p>
+        
+        
+      </div>
+    </div>
+  </div>
+  {% endfor %} 
+  {%endif%}
+
+  {% endblock %}

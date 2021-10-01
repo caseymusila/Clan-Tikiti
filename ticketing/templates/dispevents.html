@@ -1,0 +1,19 @@
+{%extends 'base.html'%} 
+{% load bootstrap4 %} 
+{% load static %} 
+
+{% block content %}
+{{ block.super}} 
+<div class="jumbotron jumbotron-fluid overlay" style="background-image:url('{{event.image.url}}'); background-size:cover; height:300px; background-position: center; background-repeat: no-repeat;">
+    <div class="">
+      <a href="{{event.link}}" style="text-decoration: none;"></a>
+    </div>
+  </div>
+  <div class="details text-center mt-5">
+    <div class="details-title">
+      <a href="{{event.link}}" target="_blank">
+        <h3 class="project-title">{{event.name}}</h3>
+      </a>
+      <a href="{{event.link}}" class="text-black"><i class="bi bi-arrow-right-circle project-icon"></i></a>
+    </div>
+    {% endblock %}
