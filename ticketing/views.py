@@ -10,7 +10,7 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 # login
-def loginPage(request)
+def loginPage(request):
 	
 		if request.method == 'POST':
 			username = request.POST.get('username')
