@@ -313,7 +313,7 @@
   
   @media (max-width:767px) {
     .site-footer {
-      padding-bottom: 0
+      padding-bottom: 
     }
   
     .site-footer .copyright-text,
@@ -391,7 +391,7 @@
     .social-icons li.title {
       display: block;
       margin-right: 0;
-      font-weight: 60
+      font-weight: 600
     }
   }
   
